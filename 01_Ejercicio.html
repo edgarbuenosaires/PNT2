@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador en JavaScript</title>
+</head>
+
+<body>
+    <h1 id="contador">0</h1>
+    <button onclick="decrementar()">Bajar</button>
+    <button onclick="incrementar()">Subir</button>
+    <script>
+        var contador = 0; // Inicializamos el contador en cero
+        function decrementar() {
+            contador--; // Restamos uno al contador
+            document.getElementById("contador").innerHTML = contador; // Actualizamos el valor en el HTML
+        }
+        function incrementar() {
+            contador++; // Sumamos uno al contador
+            document.getElementById("contador").innerHTML = contador; // Actualizamos el valor en el HTML
+        }
+    </script>
+</body>
+
+</html>
