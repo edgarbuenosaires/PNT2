@@ -44,3 +44,6 @@ console.log(myArray.filter(elemento => elemento.edad>50))
 
 
 
+
+
+

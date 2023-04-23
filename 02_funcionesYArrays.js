@@ -58,7 +58,7 @@ console.log(calcular(10,55,resta))
 
 // funcion filtro e include, encuentra todos los valores 
 console.log(myArray.filter(elemento=>elemento == 1))
-console.log(myArray.filter(elemento=>elemento >4))
+console.log(myArray.filter(elemento=>elemento > 4))
 console.log(myArray.includes(35))
 
 // funcion sort, para ordenar los elementos del vector
@@ -76,11 +76,11 @@ let otroArray = [...myArray]
 otroArray.pop()
 console.log(otroArray)
 
-// para agregarle un valor
+// para agregarle un valor (sumar un mismo elemento a cada elemento del array)
 console.log(otroArray.map(o=>o +=10))
 console.log(otroArray)
 
-// para encontrar la posicion dentro del array
+// para encontrar la posicion dentro del array, comienza en el 0
 console.log(myArray.indexOf(2))
 
 
