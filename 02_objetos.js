@@ -37,7 +37,7 @@ const persona3 = {
 
 const myArray = [persona, persona2, persona3]
 
-// aplico filter
+// aplico filter:
 console.log(myArray.filter(elemento => elemento.edad>50))
 
 
