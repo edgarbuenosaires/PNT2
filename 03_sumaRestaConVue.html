@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incorporacion de VUE.JS 2</title>
+    <!-- Incorporacion de VUE.js 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <h2>APP UNO</h2>
+    <div id="appUno">
+        {{ message }}
+        <hr />
+        {{miMensaje}}
+        <hr />
+        <p>{{valor}}</p>
+        <!-- dos formas de modificar valor -->
+        <input type="button" id="btn" value="Restar" v-on:click="valor--">
+        <input type="button" id="btn" value="Sumar" onclick="appUno.valor++">
+        <hr>
+        {{miLista}}
+        <ul>
+            <li v-for="(item, index) in miLista" :title="item.id" :class="item.genero">{{item.nombre}}</li>
+        </ul>
+        <hr>
+        <input type="button" value="Agregar nodo" v-on:click="agregarPersona">
+        <hr>
+
+    </div>
+
+    <h2>APP DOS</h2>
+    <div id="appDos">
+        {{ message }}
+        <hr />
+        {{miMensaje}}
+        <hr />
+        <p>{{valor}}</p>
+        <hr>
+        <h3>Usando Banding o como se escriba</h3>
+        <hr>
+        <input type="text" v-model="valor">
+        <!-- dos formas de modificar valor -->
+        <input type="button" id="btn" value="Restar" v-on:click="valor--">
+        <input type="button" id="btn" value="Sumar" onclick="appDos.valor++">
+    </div>
+</body>
+
+<style>
+    .Hombre {
+        color: blue;
+    }
+
+    .Mujer {
+        color: red;
+    }
+
+    .Transgenero {
+        color: yellow;
+    }
+</style>
+<script>
+    // VUE app uno
+    var appUno = new Vue({
+        el: '#appUno',
+        data: {
+            message: 'Hello Vue!',
+            miMensaje: 'Hola mundo cruel',
+            valor: 0,
+            // ejemplo con un array
+            miLista: [
+                { id: 1, nombre: 'Edgardo', genero: 'Hombre' },
+                { id: 2, nombre: 'Jose', genero: "Mujer" },
+                { id: 3, nombre: 'Pepe', genero: "Transgenero" },
+                { id: 4, nombre: 'Julian', genero: "NsNC" }
+
+            ]
+
+        },
+        methods: {
+            agregarPersona() {
+                const persona = 
+                miLista.push()
+            }
+        }
+    })
+
+    // VUE app dos
+    var appDos = new Vue({
+        el: '#appDos',
+        data: {
+            message: 'Hello Vue APP 2!',
+            miMensaje: 'Hola mundo cruel APP 2',
+            valor: 100
+        }
+    })
+
+
+</script>
+
+</html>

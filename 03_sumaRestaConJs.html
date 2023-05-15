@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma y Resta</title>
+</head>
+
+<body>
+    <div id="appVieja">
+        <p id="pid">0</p>
+        <input type="button" id="btn" value="Sumar!" onclick="Sumar()">
+        <input type="button" id="btn2" value="Restar!" onclick="Restar()">
+    </div>
+
+</body>
+<script>
+    const appVieja = document.getElementById('appVieja');
+    const pid = document.getElementById('pid');
+
+    let valor = 0;
+    function Sumar() {
+        valor++;
+        pid.innerHTML = valor;
+    }
+
+    function Restar() {
+        valor--;
+        pid.innerHTML = valor;
+    }
+</script>
+
+</html>
